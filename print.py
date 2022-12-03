@@ -27,8 +27,7 @@ def setup_window():
     headingFrame1 = Frame(root, bg="#FFBB00", bd=5)
     headingFrame1.place(relx=0.25, rely=0.1, relwidth=0.5, relheight=0.13)
 
-    headingLabel = Label(headingFrame1, text="Delete Book",
-                         bg='black', fg='white', font=('Courier', 15))
+    headingLabel = Label(headingFrame1, text="Delete Book", bg='black', fg='white', font=('Courier', 15))
     headingLabel.place(relx=0, rely=0, relwidth=1, relheight=1)
 
     labelFrame = Frame(root, bg='black')
@@ -44,8 +43,7 @@ def bookRegister():
     status = bookInfo4.get()
     status = status.lower()
 
-    insertBooks = "insert into "+bookTable + \
-        " values ('"+bid+"','"+title+"','"+author+"','"+status+"')"
+    insertBooks = "insert into "+bookTable + " values ('"+bid+"','"+title+"','"+author+"','"+status+"')"
     try:
         cur.execute(insertBooks)
         con.commit()
@@ -88,20 +86,17 @@ def addBook():
     bookInfo3.place(relx=0.3, rely=0.50, relwidth=0.62, relheight=0.08)
 
     # Book Status
-    lb4 = Label(labelFrame, text="Status(Avail/issued) : ",
-                bg='black', fg='white')
+    lb4 = Label(labelFrame, text="Status(Avail/issued) : ", bg='black', fg='white')
     lb4.place(relx=0.05, rely=0.65, relheight=0.08)
 
     bookInfo4 = Entry(labelFrame)
     bookInfo4.place(relx=0.3, rely=0.65, relwidth=0.62, relheight=0.08)
 
     # Submit Button
-    SubmitBtn = Button(root, text="SUBMIT", bg='#d1ccc0',
-                       fg='black', command=bookRegister)
+    SubmitBtn = Button(root, text="SUBMIT", bg='#d1ccc0', fg='black', command=bookRegister)
     SubmitBtn.place(relx=0.28, rely=0.9, relwidth=0.18, relheight=0.08)
 
-    quitBtn = Button(root, text="Quit", bg='#f7f1e3',
-                     fg='black',       command=root.destroy)
+    quitBtn = Button(root, text="Quit", bg='#f7f1e3', fg='black',       command=root.destroy)
     quitBtn.place(relx=0.53, rely=0.9, relwidth=0.18, relheight=0.08)
 
     root.mainloop()
@@ -130,8 +125,7 @@ def View():
     except:
         messagebox.showinfo("Failed to fetch files from database")
 
-    quitBtn = Button(root, text="Quit", bg='#f7f1e3',
-                     fg='black', command=root.destroy)
+    quitBtn = Button(root, text="Quit", bg='#f7f1e3', fg='black', command=root.destroy)
     quitBtn.place(relx=0.4, rely=0.9, relwidth=0.18, relheight=0.08)
 
     root.mainloop()
@@ -175,12 +169,10 @@ def delete():
     bookInfo1.place(relx=0.3, rely=0.5, relwidth=0.62)
 
     # Submit Button
-    SubmitBtn = Button(root, text="SUBMIT", bg='#d1ccc0',
-                       fg='black', command=deleteBook)
+    SubmitBtn = Button(root, text="SUBMIT", bg='#d1ccc0', fg='black', command=deleteBook)
     SubmitBtn.place(relx=0.28, rely=0.9, relwidth=0.18, relheight=0.08)
 
-    quitBtn = Button(root, text="Quit", bg='#f7f1e3',
-                     fg='black', command=root.destroy)
+    quitBtn = Button(root, text="Quit", bg='#f7f1e3', fg='black', command=root.destroy)
     quitBtn.place(relx=0.53, rely=0.9, relwidth=0.18, relheight=0.08)
 
     root.mainloop()
@@ -273,12 +265,10 @@ def issueBook():
     inf2.place(relx=0.3, rely=0.4, relwidth=0.62)
 
     # Issue Button
-    issueBtn = Button(root, text="Issue", bg='#d1ccc0',
-                      fg='black', command=issue)
+    issueBtn = Button(root, text="Issue", bg='#d1ccc0', fg='black', command=issue)
     issueBtn.place(relx=0.28, rely=0.9, relwidth=0.18, relheight=0.08)
 
-    quitBtn = Button(root, text="Quit", bg='#aaa69d',
-                     fg='black', command=root.destroy)
+    quitBtn = Button(root, text="Quit", bg='#aaa69d', fg='black', command=root.destroy)
     quitBtn.place(relx=0.53, rely=0.9, relwidth=0.18, relheight=0.08)
 
     root.mainloop()
@@ -390,8 +380,7 @@ Canvas1.pack(expand=True, fill=BOTH)
 
 headingFrame1 = Frame(root, bg="#FFBB00", bd=5)
 headingFrame1.place(relx=0.2, rely=0.1, relwidth=0.6, relheight=0.16)
-headingLabel = Label(headingFrame1, text="Welcome to \n Digital Library",
-                     bg='black', fg='white', font=('Courier', 15))
+headingLabel = Label(headingFrame1, text="Welcome to \n Digital Library", bg='black', fg='white', font=('Courier', 15))
 headingLabel.place(relx=0, rely=0, relwidth=1, relheight=1)
 
 
